@@ -1,1 +1,7 @@
-echo hello
+#!/bin/bash
+WORKDIR="${TMPDIR}p0roro"
+BACKGROUND=$WORKDIR/background.jpg
+mkdir -p $WORKDIR
+curl https://p0roro.ga/pororo-macos.jpg --output $BACKGROUND
+osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$BACKGROUND\""
+rm -rf $WORKDIR
