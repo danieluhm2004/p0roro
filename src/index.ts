@@ -1,6 +1,7 @@
 import Express, { Application } from 'express';
-import Morgan from 'morgan';
+
 import Fs from 'fs';
+import Morgan from 'morgan';
 
 const app: Application = Express();
 
@@ -30,4 +31,3 @@ Fs.readdir(path, async (err, middlewares) => {
     console.log('🚥  - Network: https://p0roro.ga');
   });
 });
-``;
